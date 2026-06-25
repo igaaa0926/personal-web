@@ -1,0 +1,632 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;500;600;700&family=Plus+Jakarta+Sans:wght@400;500;600;700&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/devicon.min.css"
+    />
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet" />
+    <link rel="stylesheet" href="my.css" />
+    <title>V . I — Full-Stack Developer</title>
+    
+    <style>
+      /* --- ANIMASI SLIDE NAMA DI LOGO NAVBAR --- */
+      .logo-container {
+        display: flex;
+        align-items: center;
+        gap: 0; /* Mulai dari 0 agar tidak ada jarak sebelum teks bergeser */
+        text-decoration: none;
+      }
+
+      .logo-monogram {
+        z-index: 2; /* Menjaga logo kotak tetap di layer atas */
+      }
+
+      .logo-text {
+        font-family: 'Space Grotesk', sans-serif;
+        font-size: 0.9rem;
+        font-weight: 600;
+        color: #ffffff;
+        letter-spacing: 1px;
+        text-transform: uppercase;
+        white-space: nowrap; /* Mencegah teks turun baris saat slide */
+        overflow: hidden; /* Menyembunyikan teks sebelum animasi berjalan */
+        max-width: 0; /* Mulai dari lebar 0 */
+        opacity: 0; /* Mulai dari transparan */
+        
+        /* - 1s = Durasi slide-out selama 1 detik
+           - 2s = JEDA TUNGGU logo doang selama 2 detik baru teksnya muncul
+        */
+        animation: slideOutName 1s ease-in-out 2s forwards;
+      }
+
+      @keyframes slideOutName {
+        0% {
+          max-width: 0;
+          opacity: 0;
+          margin-left: 0;
+        }
+        100% {
+          max-width: 250px; /* Lebar maksimal teks nama */
+          opacity: 1;
+          margin-left: 12px; /* Jarak antara boks logo dan teks nama setelah muncul */
+        }
+      }
+    </style>
+  </head>
+  <body>
+    <div class="ambient-glow glow-1"></div>
+    <div class="ambient-glow glow-2"></div>
+    <div class="matrix-grid-overlay"></div>
+
+    <div class="nav-wrapper" data-aos="fade-down">
+      <header class="navbar">
+        <div class="logo">
+          <a href="#hero" class="logo-container">
+            <div class="logo-monogram">
+              <span>V</span>
+              <span class="dot">I</span>
+            </div>
+            <span class="logo-text">Valentino Imanuel</span>
+          </a>
+        </div>
+        <nav class="nav-menu">
+          <ul>
+            <li><a href="index.html" class="active-page">HOME</a></li>
+            <li><a href="about.html">ABOUT</a></li>
+            <li><a href="projects.html">PROJECTS</a></li>
+          </ul>
+        </nav>
+        <div class="menu-toggle" id="mobile-menu-btn">
+          <span></span>
+          <span></span>
+          <span></span>
+        </div>
+      </header>
+    </div>
+
+    <section id="hero">
+      <div class="container hero-container">
+        <div class="hero-headline-box" data-aos="fade-right">
+          <div class="status-badge">
+            <span class="pulse-dot"></span> Based in Surabaya, Indonesia
+          </div>
+          <p class="hero-introduction">HI, I AM VALENTINO IMANUEL —</p>
+          <h1 class="hero-title">
+            Crafting Digital <span class="text-gradient">Ecosystems.</span
+            ><br />
+            Engineering Fluid <span class="text-outline">Interfaces.</span>
+          </h1>
+          <p class="hero-sub">
+            An Informatics student specializing in high-performance full-stack
+            web architectures, specialized MVC structures, and immersive
+            interactive game engineering.
+          </p>
+          <div class="hero-actions">
+            <a href="mailto:valentinoanggono09@gmail.com" class="btn-cyber"
+              >START A PROJECT <span class="btn-arrow">→</span></a
+            >
+            <a href="#projects" class="btn-link">Explore Systems</a>
+          </div>
+        </div>
+
+        <div
+          class="hero-visual-mesh"
+          id="particle-trigger"
+          data-aos="fade-left"
+        >
+          <canvas id="mesh-particle-canvas"></canvas>
+
+          <div class="mesh-card platform-node">
+            <div class="card-status-light"></div>
+            <i class="devicon-nodejs-plain colored"></i>
+            <div>
+              <h5>Core Engine</h5>
+              <span class="live-metric">Active Routing</span>
+            </div>
+          </div>
+
+          <div class="mesh-card dynamic-ui">
+            <i class="devicon-react-original colored"></i>
+            <div>
+              <h5>Client Interface</h5>
+              <span class="live-metric">Reactive State</span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section id="about">
+      <div class="container">
+        <div class="section-header" data-aos="fade-up">
+          <h2 class="section-title">Architectural Profile & Bio</h2>
+        </div>
+
+        <div class="bento-grid">
+          <div class="bento-card large-intro" data-aos="fade-up">
+            <div class="bio-ui-header">
+              <div class="bio-core-tag">Active Terminal</div>
+              <div class="bio-pulse-line"></div>
+            </div>
+
+            <div class="bio-visual-statement">
+              An Informatics student fusing
+              <span class="highlight-text">structured backend engineering</span>
+              with high-end, fluid
+              <span class="highlight-text">user interfaces</span>.
+            </div>
+
+            <div class="bio-pillars-grid">
+              <div class="pillar-item">
+                <span class="pillar-meta">LAYER 01</span>
+                <h4>Full-Stack Web</h4>
+                <p>High-performance MVC architectures.</p>
+              </div>
+              <div class="pillar-item">
+                <span class="pillar-meta">LAYER 02</span>
+                <h4>Game Systems</h4>
+                <p>Interactive engineering & synchronization.</p>
+              </div>
+              <div class="pillar-item">
+                <span class="pillar-meta">LAYER 03</span>
+                <h4>Optimization</h4>
+                <p>Pixel-perfect render cycles & query speeds.</p>
+              </div>
+            </div>
+
+            <div class="card-footer-meta">
+              V.I // Software Engineering Identity Core
+            </div>
+          </div>
+
+          <div
+            class="bento-card tech-marquee-card"
+            data-aos="fade-up"
+            data-aos-delay="100"
+          >
+            <div class="bento-card-inner-stretch">
+              <h3>Runtime Engines & Tech Stack</h3>
+
+              <div class="tech-metrics-grid">
+                <div class="tech-metric-row">
+                  <span class="tech-name"
+                    >Backend Architecture (PHP / Node.js)</span
+                  >
+                  <div class="tech-progress-bar">
+                    <div class="progress-fill" style="width: 92%"></div>
+                  </div>
+                </div>
+                <div class="tech-metric-row">
+                  <span class="tech-name"
+                    >Client-Side Systems (React / Tailwind)</span
+                  >
+                  <div class="tech-progress-bar">
+                    <div class="progress-fill" style="width: 88%"></div>
+                  </div>
+                </div>
+                <div class="tech-metric-row">
+                  <span class="tech-name"
+                    >Interactive Game Engines (Unity 6)</span
+                  >
+                  <div class="tech-progress-bar">
+                    <div class="progress-fill" style="width: 85%"></div>
+                  </div>
+                </div>
+              </div>
+
+              <div class="marquee-container">
+                <div class="marquee-track">
+                  <div class="stack-tag">
+                    <i class="devicon-php-plain colored"></i> PHP
+                  </div>
+                  <div class="stack-tag">
+                    <i class="devicon-react-original colored"></i> React.js
+                  </div>
+                  <div class="stack-tag">
+                    <i class="devicon-nodejs-plain colored"></i> Node.js
+                  </div>
+                  <div class="stack-tag">
+                    <i class="devicon-tailwindcss-original colored"></i>
+                    Tailwind
+                  </div>
+                  <div class="stack-tag">
+                    <i class="devicon-mysql-plain-wordmark colored"></i> MySQL
+                  </div>
+                  <div class="stack-tag">
+                    <i class="devicon-javascript-plain colored"></i> JavaScript
+                  </div>
+                  <div class="stack-tag">
+                    <i class="devicon-unity-plain"></i> Unity 6
+                  </div>
+
+                  <div class="stack-tag">
+                    <i class="devicon-php-plain colored"></i> PHP
+                  </div>
+                  <div class="stack-tag">
+                    <i class="devicon-react-original colored"></i> React.js
+                  </div>
+                  <div class="stack-tag">
+                    <i class="devicon-nodejs-plain colored"></i> Node.js
+                  </div>
+                  <div class="stack-tag">
+                    <i class="devicon-tailwindcss-original colored"></i>
+                    Tailwind
+                  </div>
+                  <div class="stack-tag">
+                    <i class="devicon-mysql-plain-wordmark colored"></i> MySQL
+                  </div>
+                  <div class="stack-tag">
+                    <i class="devicon-javascript-plain colored"></i> JavaScript
+                  </div>
+                  <div class="stack-tag">
+                    <i class="devicon-unity-plain"></i> Unity 6
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <div class="card-footer-meta">
+              Framework Integration // Active Control
+            </div>
+          </div>
+
+          <div
+            class="bento-card metrics-card"
+            data-aos="fade-up"
+            data-aos-delay="200"
+          >
+            <div class="metric-wrapper">
+              <span class="metric-num">99<span class="percent">%</span></span>
+              <span class="metric-label"
+                >Efficiency Focus & Asynchronous Logic</span
+              >
+            </div>
+          </div>
+
+          <div
+            class="bento-card timeline-card"
+            data-aos="fade-up"
+            data-aos-delay="300"
+          >
+            <h3>Current Roadmap</h3>
+            <div class="mini-timeline">
+              <div class="timeline-node">
+                <span class="node-status">Active Focus</span>
+                <p>
+                  Distributed web systems, complex state control, and
+                  collaborative game environments.
+                </p>
+              </div>
+              <div class="timeline-node">
+                <span class="node-status">Completed Architectural Core</span>
+                <p>
+                  Custom authentication models, strict routing layers, and MVC
+                  workspace optimization.
+                </p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section id="projects">
+      <div class="container">
+        <div class="section-header" data-aos="fade-up">
+          <h2 class="section-title">Selected Production Builds</h2>
+        </div>
+
+        <div class="asymmetric-gallery">
+          <div class="project-block wide" data-aos="fade-up">
+            <div class="premium-dummy-frame pattern-cyber-mesh" style="height: auto; aspect-ratio: 16 / 9; overflow: hidden; position: relative;">
+              <img
+                src="images/game.jpg"
+                alt="Cyberverse Adventure UI Design"
+                class="project-img"
+                style="width: 100%; height: 100%; object-fit: cover; display: block;"
+              />
+              <div class="scanner-laser-line"></div>
+              <div class="corner-indicator-tech">SYS_NODE_01</div>
+            </div>
+            <div class="project-info-layer">
+              <div class="mock-ui-elements">
+                <span></span><span></span><span></span>
+              </div>
+              <div class="project-text-details">
+                <h4>Cyberverse Adventure</h4>
+                <p>
+                  Real-time game menu layouts, immersive HUD modules, and structured navigation workflows crafted inside Unity 6 UI Toolkit.
+                </p>
+                <div class="tech-badges-row">
+                  <span>Unity 6</span><span>C# Engine</span><span>UI Design</span>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <div class="project-block tall" data-aos="fade-up" style="display: flex; flex-direction: column;">
+            <div class="premium-dummy-frame pattern-abstract-blocks" style="flex: 1; min-height: 480px; overflow: hidden; position: relative; display: flex; align-items: stretch;">
+              <img
+                src="images/rasanusa.png"
+                alt="Rasa Nusa Resto UI Design"
+                class="project-img"
+                style="width: 100%; height: 100%; object-fit: cover; object-position: top; display: block;"
+              />
+              <div class="corner-indicator-tech">UI_CORE_02</div>
+            </div>
+            <div class="project-info-layer">
+              <div class="mock-ui-elements">
+                <span></span><span></span><span></span>
+              </div>
+              <div class="project-text-details">
+                <h4>Rasa Nusa Restaurant System</h4>
+                <p>
+                  High-fidelity interactive smartphone presentation framework showcasing rich traditional culinary ordering pipelines.
+                </p>
+                <div class="tech-badges-row">
+                  <span>Figma</span><span>UI/UX Mockups</span>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <div
+            class="project-block standard"
+            data-aos="fade-up"
+            data-aos-delay="100"
+          >
+            <div class="premium-dummy-frame pattern-matrix-dots" style="height: auto; aspect-ratio: 16 / 10; overflow: hidden; position: relative;">
+              <img
+                src="images/bening.jpg"
+                alt="Warkop Bening System Prototype"
+                class="project-img"
+                style="width: 100%; height: 100%; object-fit: cover; display: block;"
+              />
+              <div class="scanner-laser-line"></div>
+              <div class="corner-indicator-tech">MVC_CORE_03</div>
+            </div>
+            <div class="project-info-layer">
+              <div class="mock-ui-elements">
+                <span></span><span></span><span></span>
+              </div>
+              <div class="project-text-details">
+                <h4>Warkop Bening Ordering Platform</h4>
+                <p>
+                  An interactive, high-efficiency localized coffee-house ordering layout mapping complex queues into digital pipelines.
+                </p>
+                <div class="tech-badges-row">
+                  <span>Figma Studio</span><span>Prototyping</span>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section id="contact">
+      <div class="container">
+        <div class="contact-box-grid" data-aos="zoom-in-up">
+          <div class="contact-left-cta">
+            <h2>Let's synthesize an exceptional build.</h2>
+            <p>
+              Looking for an adaptive full-stack developer who understands
+              sophisticated modern layouts?
+            </p>
+            <a
+              href="mailto:valentinoanggono09@gmail.com"
+              class="contact-email-link"
+              >valentinoanggono09@gmail.com</a
+            >
+          </div>
+
+          <div class="contact-right-links">
+            <div class="contact-ui-header">
+              <span class="link-header">// CONNECT WITH ME</span>
+              <span class="contact-status-tag">GET IN TOUCH</span>
+            </div>
+
+            <div class="interactive-links">
+              <a
+                href="https://github.com/igaaa0926"
+                target="_blank"
+                class="social-link-item"
+              >
+                <div class="link-left-content">
+                  <span class="digital-indicator-dot"></span>
+                  <i class="devicon-github-original social-icon"></i>
+                  <span class="link-text">GITHUB</span>
+                </div>
+                <span class="link-arrow">→</span>
+              </a>
+
+              <a
+                href="https://www.linkedin.com/in/valentino-igaa/"
+                target="_blank"
+                class="social-link-item"
+              >
+                <div class="link-left-content">
+                  <span class="digital-indicator-dot"></span>
+                  <i class="devicon-linkedin-plain social-icon"></i>
+                  <span class="link-text">LINKEDIN</span>
+                </div>
+                <span class="link-arrow">→</span>
+              </a>
+
+              <a
+                href="https://www.instagram.com/valentinoiga/"
+                target="_blank"
+                class="social-link-item"
+              >
+                <div class="link-left-content">
+                  <span class="digital-indicator-dot"></span>
+                  <svg
+                    class="social-icon-svg"
+                    viewBox="0 0 24 24"
+                    fill="none"
+                    stroke="currentColor"
+                    stroke-width="2"
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                  >
+                    <rect
+                      x="2"
+                      y="2"
+                      width="20"
+                      height="20"
+                      rx="5"
+                      ry="5"
+                    ></rect>
+                    <path
+                      d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z"
+                    ></path>
+                    <line x1="17.5" y1="6.5" x2="17.51" y2="6.5"></line>
+                  </svg>
+                  <span class="link-text">INSTAGRAM</span>
+                </div>
+                <span class="link-arrow">→</span>
+              </a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <footer>
+      <div class="container footer-content">
+        <p>&copy; 2026 V.I Portfolio Architecture. All rights reserved.</p>
+        <p class="footer-moto">Precision Engineering // High Aesthetics</p>
+      </div>
+    </footer>
+
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+    <script>
+      AOS.init({ once: true, duration: 1000, ease: "ease-out-cubic" });
+
+      // PARTICLE CANVAS PHYSICS
+      const canvas = document.getElementById("mesh-particle-canvas");
+      const ctx = canvas.getContext("2d");
+      const triggerArea = document.getElementById("particle-trigger");
+
+      let particlesArray = [];
+      const numberOfParticles = 65;
+      const mouse = { x: null, y: null, radius: 90 };
+
+      triggerArea.addEventListener("mousemove", (e) => {
+        const rect = canvas.getBoundingClientRect();
+        mouse.x = e.clientX - rect.left;
+        mouse.y = e.clientY - rect.top;
+      });
+
+      triggerArea.addEventListener("mouseleave", () => {
+        mouse.x = null;
+        mouse.y = null;
+      });
+
+      function resizeCanvas() {
+        canvas.width = triggerArea.offsetWidth;
+        canvas.height = triggerArea.offsetHeight;
+        initParticles();
+      }
+
+      class Particle {
+        constructor() {
+          this.x = Math.random() * canvas.width;
+          this.y = Math.random() * canvas.height;
+          this.size = Math.random() * 2 + 1;
+          this.speedX = (Math.random() - 0.5) * 0.35;
+          this.speedY = (Math.random() - 0.5) * 0.35;
+        }
+        update() {
+          this.x += this.speedX;
+          this.y += this.speedY;
+
+          if (this.x < 0 || this.x > canvas.width) this.speedX = -this.speedX;
+          if (this.y < 0 || this.y > canvas.height) this.speedY = -this.speedY;
+
+          if (mouse.x !== null && mouse.y !== null) {
+            let dx = mouse.x - this.x;
+            let dy = mouse.y - this.y;
+            let distance = Math.sqrt(dx * dx + dy * dy);
+            if (distance < mouse.radius) {
+              let force = (mouse.radius - distance) / mouse.radius;
+              this.x -= (dx / distance) * force * 4;
+              this.y -= (dy / distance) * force * 4;
+            }
+          }
+        }
+        draw() {
+          ctx.fillStyle = "rgba(163, 230, 53, 0.4)";
+          ctx.beginPath();
+          ctx.arc(this.x, this.y, this.size, 0, Math.PI * 2);
+          ctx.fill();
+        }
+      }
+
+      function initParticles() {
+        particlesArray = [];
+        for (let i = 0; i < numberOfParticles; i++) {
+          particlesArray.push(new Particle());
+        }
+      }
+
+      function connectParticles() {
+        for (let a = 0; a < particlesArray.length; a++) {
+          for (let b = a; b < particlesArray.length; b++) {
+            let dx = particlesArray[a].x - particlesArray[b].x;
+            let dy = particlesArray[a].y - particlesArray[b].y;
+            let distance = Math.sqrt(dx * dx + dy * dy);
+            if (distance < 75) {
+              let opacity = 1 - distance / 75;
+              ctx.strokeStyle = `rgba(163, 230, 53, ${opacity * 0.12})`;
+              ctx.lineWidth = 0.75;
+              ctx.beginPath();
+              ctx.moveTo(particlesArray[a].x, particlesArray[a].y);
+              ctx.lineTo(particlesArray[b].x, particlesArray[b].y);
+              ctx.stroke();
+            }
+          }
+        }
+      }
+
+      window.addEventListener("resize", resizeCanvas);
+      resizeCanvas();
+      animate();
+
+      function animate() {
+        ctx.clearRect(0, 0, canvas.width, canvas.height);
+        for (let i = 0; i < particlesArray.length; i++) {
+          particlesArray[i].update();
+          particlesArray[i].draw();
+        }
+        connectParticles();
+        requestAnimationFrame(animate);
+      }
+
+      // MOBILE MENU LOGIC
+      const mobileMenuBtn = document.getElementById("mobile-menu-btn");
+      const navMenu = document.querySelector(".nav-menu");
+
+      mobileMenuBtn.addEventListener("click", () => {
+        mobileMenuBtn.classList.toggle("active");
+        navMenu.classList.toggle("active");
+      });
+
+      document.querySelectorAll(".nav-menu a").forEach((link) => {
+        link.addEventListener("click", () => {
+          mobileMenuBtn.classList.remove("active");
+          navMenu.classList.remove("active");
+        });
+      });
+    </script>
+  </body>
+</html>

@@ -1,0 +1,306 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>V . I — About Me</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Caveat:wght@700&family=Plus+Jakarta+Sans:wght@400;500;600&family=Space+Grotesk:wght@500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="stylesheet" href="my.css">
+    
+    <style>
+      /* --- ANIMASI SLIDE NAMA DI LOGO NAVBAR --- */
+      .logo-container {
+        display: flex;
+        align-items: center;
+        gap: 0; /* Mulai dari 0 agar tidak ada jarak sebelum teks bergeser */
+        text-decoration: none;
+      }
+
+      .logo-monogram {
+        z-index: 2; /* Menjaga logo kotak tetap di layer atas */
+      }
+
+      .logo-text {
+        font-family: 'Space Grotesk', sans-serif;
+        font-size: 0.9rem;
+        font-weight: 600;
+        color: #ffffff;
+        letter-spacing: 1px;
+        text-transform: uppercase;
+        white-space: nowrap; /* Mencegah teks turun baris saat slide */
+        overflow: hidden; /* Menyembunyikan teks sebelum animasi berjalan */
+        max-width: 0; /* Mulai dari lebar 0 */
+        opacity: 0; /* Mulai dari transparan */
+        
+        /* - 1s = Durasi slide-out selama 1 detik
+           - 2s = JEDA TUNGGU logo doang selama 2 detik baru teksnya muncul
+        */
+        animation: slideOutName 1s ease-in-out 2s forwards;
+      }
+
+      @keyframes slideOutName {
+        0% {
+          max-width: 0;
+          opacity: 0;
+          margin-left: 0;
+        }
+        100% {
+          max-width: 250px; /* Lebar maksimal teks nama */
+          opacity: 1;
+          margin-left: 12px; /* Jarak antara boks logo dan teks nama setelah muncul */
+        }
+      }
+    </style>
+</head>
+<body>
+
+    <div class="ambient-glow glow-1"></div>
+    <div class="ambient-glow glow-2"></div>
+    <div class="matrix-grid-overlay"></div>
+
+    <div class="tech-particles-container">
+        <div class="particle-box p1"></div>
+        <div class="particle-box p2"></div>
+        <div class="particle-box p3"></div>
+        <div class="particle-box p4"></div>
+    </div>
+
+    <div class="nav-wrapper">
+        <header class="navbar">
+            <div class="logo">
+                <a href="index.html" class="logo-container">
+                    <div class="logo-monogram">V<span class="dot">I</span></div>
+                    <span class="logo-text">Valentino Imanuel</span>
+                </a>
+            </div>
+            
+            <div class="menu-toggle" id="mobile-menu-btn">
+                <span></span>
+                <span></span>
+                <span></span>
+            </div>
+
+            <nav class="nav-menu" id="nav-navigation-box">
+                <ul>
+                    <li><a href="index.html">HOME</a></li>
+                    <li><a href="about.html" class="active-page">ABOUT</a></li>
+                    <li><a href="projects.html">PROJECTS</a></li>
+                </ul>
+            </nav>
+        </header>
+    </div>
+
+    <main class="container about-page-wrapper">
+        
+        <section class="profile-hero-section">
+            <div class="profile-grid">
+                
+                <div class="profile-photo-wrapper">
+                    <div class="photo-deck" id="val-photo-deck" title="Click to view next photo!">
+                        <div class="deck-card">
+                            <img src="images/foto3.jpeg" alt="Valentino Imanuel 4">
+                        </div>
+                        <div class="deck-card">
+                            <img src="images/foto2.jpeg" alt="Valentino Imanuel 3">
+                        </div>
+                        <div class="deck-card">
+                            <img src="images/foto1.jpeg" alt="Valentino Imanuel 2">
+                        </div>
+                        <div class="deck-card">
+                            <img src="images/foto.JPG" alt="Valentino Imanuel 1">
+                        </div>
+
+                        <div class="its-me-pointer">
+                            <svg class="handwritten-arrow" viewBox="0 0 50 50">
+                                <path d="M40 40 C 25 35, 15 25, 10 10 M 10 10 L 18 12 M 10 10 L 12 18" stroke="rgba(255, 255, 255, 0.4)" stroke-width="2.5" stroke-linecap="round" fill="none" />
+                            </svg>
+                            <span class="its-me-text">it's me!</span>
+                        </div>
+                    </div>
+                    <div class="deck-hint-text"><i class="fas fa-hand-pointer"></i> Click card to shuffle</div>
+                </div>
+
+                <div class="profile-info-content">
+                    <div class="terminal-tag">Nice to meet you! 👋🏻</div>
+                    <h1 class="about-main-title">Valentino Imanuel</h1>
+                    <p class="about-bio-paragraph">
+                        Hey there!🤩 I'm an Informatics student who loves building cool stuff for the web. I enjoy turning complex code into clean, beautiful, and fluid websites that just work perfectly.
+                    </p>
+                    <p class="about-bio-paragraph">
+                        When I'm not coding, I'm usually busy exploring new design ideas, optimizing web systems, or experimenting with interactive games. I always love learning new things and making ideas come alive on the screen!
+                    </p>
+
+                    <div class="meta-status-grid">
+                        <div class="meta-box">
+                            <span class="m-label">BASED IN</span>
+                            <span class="m-value">Surabaya, Indonesia</span>
+                        </div>
+                        <div class="meta-box">
+                            <span class="m-label">LOVE USING</span>
+                            <span class="m-value">Full-Stack Tech</span>
+                        </div>
+                        <div class="meta-box">
+                            <span class="m-label">STUDYING</span>
+                            <span class="m-value">Informatics Engineering</span>
+                        </div>
+                        <div class="meta-box operational-status-box">
+                            <span class="m-label">CURRENT STATUS</span>
+                            <span class="m-value animation-pulse-text">Open for cool projects</span>
+                        </div>
+                    </div>
+
+                    <div class="about-social-row">
+                        <a href="https://github.com/igaaa0926" target="_blank" class="about-social-icon" title="GitHub">
+                            <i class="fab fa-github"></i>
+                        </a>
+                        <a href="https://www.instagram.com/valentinoiga/" target="_blank" class="about-social-icon" title="Instagram">
+                            <i class="fab fa-instagram"></i>
+                        </a>
+                        <a href="https://linkedin.com/in/valentino-igaa/" target="_blank" class="about-social-icon" title="LinkedIn">
+                            <i class="fab fa-linkedin-in"></i>
+                        </a>
+                    </div>
+                </div>
+
+            </div>
+        </section>
+
+        <section class="skills-matrix-section">
+            <div class="section-header">
+                <div class="bio-pulse-line"></div>
+                <h2 class="section-title">Tech Arsenal</h2>
+            </div>
+            
+            <div class="skills-matrix-grid">
+                <div class="skill-progress-card">
+                    <div class="skill-info">
+                        <span class="skill-name">Front-End Development</span>
+                        <span class="skill-percentage">90%</span>
+                    </div>
+                    <div class="progress-bar-bg">
+                        <div class="progress-bar-fill" style="--target-width: 90%;"></div>
+                    </div>
+                </div>
+                <div class="skill-progress-card">
+                    <div class="skill-info">
+                        <span class="skill-name">Back-End Architecture</span>
+                        <span class="skill-percentage">85%</span>
+                    </div>
+                    <div class="progress-bar-bg">
+                        <div class="progress-bar-fill" style="--target-width: 85%;"></div>
+                    </div>
+                </div>
+                <div class="skill-progress-card">
+                    <div class="skill-info">
+                        <span class="skill-name">Database Systems</span>
+                        <span class="skill-percentage">80%</span>
+                    </div>
+                    <div class="progress-bar-bg">
+                        <div class="progress-bar-fill" style="--target-width: 80%;"></div>
+                    </div>
+                </div>
+                <div class="skill-progress-card">
+                    <div class="skill-info">
+                        <span class="skill-name">UI/UX Layout & Motion</span>
+                        <span class="skill-percentage">75%</span>
+                    </div>
+                    <div class="progress-bar-bg">
+                        <div class="progress-bar-fill" style="--target-width: 75%;"></div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section class="timeline-experience-section">
+            <div class="section-header">
+                <div class="bio-pulse-line"></div>
+                <h2 class="section-title">My Journey</h2>
+            </div>
+
+            <div class="main-timeline-container">
+                <div class="timeline-center-line"></div>
+
+                <div class="timeline-item left-item">
+                    <div class="timeline-dot"></div>
+                    <div class="timeline-content-card">
+                        <span class="time-stamp">2024 — PRESENT</span>
+                        <h4>Freelance Web Developer</h4>
+                        <div class="role-sub">Building Open Source & Client Projects</div>
+                        <p class="card-desc">Creating databases, cleaning up APIs, and making sure the website looks amazing and super responsive on any screen.</p>
+                    </div>
+                </div>
+
+                <div class="timeline-item right-item">
+                    <div class="timeline-dot"></div>
+                    <div class="timeline-content-card">
+                        <span class="time-stamp">2023 — 2024</span>
+                        <h4>Game Projects</h4>
+                        <div class="role-sub">Campus & Personal Ventures</div>
+                        <p class="card-desc">Had a lot of fun building interactive game logic, creating smooth movements, and handling pixel-perfect visuals.</p>
+                    </div>
+                </div>
+
+                <div class="timeline-item left-item">
+                    <div class="timeline-dot"></div>
+                    <div class="timeline-content-card">
+                        <span class="time-stamp">2022 — 2023</span>
+                        <h4>Front-End Explorer</h4>
+                        <div class="role-sub">Learning & Crafting Layouts</div>
+                        <p class="card-desc">Started dipping my toes into UI design, playing around with CSS flexbox/grid, and creating eye-catching website layouts.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+    </main>
+
+    <footer>
+        <div class="container footer-content">
+            <p>&copy; 2026 Valentino Imanuel. All rights reserved.</p>
+            <p class="footer-moto">Building Fluid Digital Experiences</p>
+        </div>
+    </footer>
+
+    <script>
+        // Mobile Navbar Toggle Logic
+        const mobileMenuBtn = document.getElementById('mobile-menu-btn');
+        const navNavigationBox = document.getElementById('nav-navigation-box');
+
+        if(mobileMenuBtn && navNavigationBox) {
+            mobileMenuBtn.addEventListener('click', () => {
+                mobileMenuBtn.classList.toggle('active');
+                navNavigationBox.classList.toggle('active');
+            });
+        }
+
+        // PHOTO DECK SHUFFLE LOGIC
+        const deck = document.getElementById('val-photo-deck');
+        let isShuffling = false;
+
+        if (deck) {
+            deck.addEventListener('click', (e) => {
+                if (isShuffling) return;
+                
+                const cards = deck.querySelectorAll('.deck-card');
+                if (cards.length <= 1) return;
+                
+                isShuffling = true;
+                const topCard = cards[cards.length - 1];
+                
+                // Animasi Geser Keluar (Slide Out)
+                topCard.classList.add('slide-out');
+                
+                setTimeout(() => {
+                    // Pindahkan posisi elemen ke tumpukan paling bawah HTML deck
+                    topCard.classList.remove('slide-out');
+                    deck.insertBefore(topCard, deck.querySelector('.deck-card'));
+                    isShuffling = false;
+                }, 450); // Waktu sinkron dengan transisi CSS (0.45s)
+            });
+        }
+    </script>
+</body>
+</html>

@@ -1,0 +1,472 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>V . I — Projects</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600&family=Space+Grotesk:wght@500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="stylesheet" href="my.css">
+
+    <style>
+      /* --- ANIMASI SLIDE NAMA DI LOGO NAVBAR --- */
+      .logo-container {
+        display: flex;
+        align-items: center;
+        gap: 0; /* Mulai dari 0 agar tidak ada jarak sebelum teks bergeser */
+        text-decoration: none;
+      }
+
+      .logo-monogram {
+        z-index: 2; /* Menjaga logo kotak tetap di layer atas */
+      }
+
+      .logo-text {
+        font-family: 'Space Grotesk', sans-serif;
+        font-size: 0.9rem;
+        font-weight: 600;
+        color: #ffffff;
+        letter-spacing: 1px;
+        text-transform: uppercase;
+        white-space: nowrap; /* Mencegah teks turun baris saat slide */
+        overflow: hidden; /* Menyembunyikan teks sebelum animasi berjalan */
+        max-width: 0; /* Mulai dari lebar 0 */
+        opacity: 0; /* Mulai dari transparan */
+        
+        /* - 1s = Durasi slide-out selama 1 detik
+           - 2s = JEDA TUNGGU logo doang selama 2 detik baru teksnya muncul
+        */
+        animation: slideOutName 1s ease-in-out 2s forwards;
+      }
+
+      @keyframes slideOutName {
+        0% {
+          max-width: 0;
+          opacity: 0;
+          margin-left: 0;
+        }
+        100% {
+          max-width: 250px; /* Lebar maksimal teks nama */
+          opacity: 1;
+          margin-left: 12px; /* Jarak antara boks logo dan teks nama setelah muncul */
+        }
+      }
+    </style>
+</head>
+<body>
+
+    <div class="ambient-glow glow-1"></div>
+    <div class="ambient-glow glow-2"></div>
+    <div class="matrix-grid-overlay"></div>
+
+    <div class="nav-wrapper">
+        <header class="navbar">
+            <div class="logo">
+                <a href="index.html" class="logo-container">
+                    <div class="logo-monogram">V<span class="dot">I</span></div>
+                    <span class="logo-text">Valentino Imanuel</span>
+                </a>
+            </div>
+            
+            <div class="menu-toggle" id="mobile-menu-btn">
+                <span></span>
+                <span></span>
+                <span></span>
+            </div>
+
+            <nav class="nav-menu" id="nav-navigation-box">
+                <ul>
+                    <li><a href="index.html">HOME</a></li>
+                    <li><a href="about.html">ABOUT</a></li>
+                    <li><a href="projects.html" class="active-page">PROJECTS</a></li>
+                </ul>
+            </nav>
+        </header>
+    </div>
+
+    <main class="container bento-page-container">
+        
+        <header class="bento-header">
+            <h1>Projects💻</h1>
+            <p>A collection of interface designs, game architectures, and digital ecosystems</p>
+        </header>
+
+        <div class="bento-grid">
+            
+            <div class="bento-card card-full">
+                <div class="card-info">
+                    <h2 class="project-title">
+                        <i class="fab fa-unity game-icon"></i> Cyberverse Adventure
+                    </h2>
+                    <div class="tech-badges">
+                        <span class="badge badge-unity">UNITY 6</span>
+                        <span class="badge">C#</span>
+                        <span class="badge">GAME UI</span>
+                    </div>
+                    <p class="project-desc">
+                        A comprehensive interface design for a 2D top-down adventure. Developed with Unity's UI Toolkit to deliver a seamless HUD, interactive menu systems, and optimized asset rendering for modern gaming experiences.
+                    </p>
+                    
+                </div>
+                <div class="bento-img-preview tall-preview">
+                    <img src="images/game.jpg" alt="Cyberverse UI Design" class="bento-mockup-img">
+                </div>
+            </div>
+
+            <div class="bento-card card-half">
+                <div class="card-info">
+                    <h2 class="project-title">Warkop Bening</h2>
+                    <div class="tech-badges">
+                        <span class="badge">FIGMA</span>
+                        <span class="badge">UI/UX</span>
+                    </div>
+                    <p class="project-desc">
+                        Digitalizing local coffee house workflows through intuitive mobile ordering and interactive interactive wireframes.
+                    </p>
+                    <div class="bento-actions">
+                        <a href="https://www.figma.com/proto/vOzQcXcONXmn7NrHYDFhhh/Untitled?node-id=1-516" target="_blank" class="btn-bento btn-primary">
+                            Prototype <i class="fas fa-link"></i>
+                        </a>
+                    </div>
+                </div>
+                <div class="bento-img-preview mobile-preview">
+                    <img src="images/bening.jpg" alt="Warkop Bening Mockup" class="bento-mockup-img">
+                </div>
+            </div>
+
+            <div class="bento-card card-half">
+                <div class="card-info">
+                    <h2 class="project-title">Rasa Nusa App</h2>
+                    <div class="tech-badges">
+                        <span class="badge">FIGMA</span>
+                        <span class="badge">UI/UX</span>
+                    </div>
+                    <p class="project-desc">
+                        Showcasing Indonesian delights through a high-performance, visually rich restaurant system layout.
+                    </p>
+                    <div class="bento-actions">
+                        <a href="#" target="_blank" class="btn-bento btn-primary">
+                            Prototype <i class="fas fa-link"></i>
+                        </a>
+                    </div>
+                </div>
+                <div class="bento-img-preview mobile-preview">
+                    <img src="images/rasanusa.png" alt="Rasa Nusa Mockup" class="bento-mockup-img">
+                </div>
+            </div>
+
+            <div class="bento-card card-info-full">
+                <div class="info-grid-wrapper">
+                    <div class="info-block">
+                        <span class="info-label">BASED IN</span>
+                        <span class="info-value">Surabaya, Indonesia</span>
+                    </div>
+                    <div class="info-block">
+                        <span class="info-label">STUDYING</span>
+                        <span class="info-value">Informatics Engineering</span>
+                    </div>
+                    <div class="info-block">
+                        <span class="info-label">STATUS</span>
+                        <span class="info-value status-active">Available for builds</span>
+                    </div>
+                </div>
+                
+                <div class="bento-socials">
+                    <a href="https://github.com/igaaa0926" target="_blank"><i class="fab fa-github"></i></a>
+                    <a href="https://www.instagram.com/valentinoiga/" target="_blank"><i class="fab fa-instagram"></i></a>
+                    <a href="https://linkedin.com/in/valentino-igaa/" target="_blank"><i class="fab fa-linkedin"></i></a>
+                </div>
+            </div>
+
+        </div>
+    </main>
+
+    <footer>
+        <div class="container footer-content">
+            <p>&copy; 2026 Valentino Imanuel. All rights reserved.</p>
+        </div>
+    </footer>
+
+    <style>
+        :root {
+            --bg-card: #0d0d0e;
+            --bg-card-gradient: linear-gradient(145deg, #0f0f11 0%, #070708 100%);
+            --border-card: #1c1c21;
+            --border-hover: #31313a;
+            --text-muted: #a1a1aa;
+            --badge-bg: #18181b;
+            --accent-glow: rgba(255, 255, 255, 0.03);
+        }
+
+        .bento-page-container {
+            margin-top: 7rem;
+            padding-bottom: 4rem;
+            position: relative;
+            z-index: 10;
+        }
+
+        .bento-header {
+            text-align: center;
+            margin-bottom: 4rem;
+        }
+
+        .bento-header h1 {
+            font-family: 'Space Grotesk', sans-serif;
+            font-size: 3rem;
+            color: #ffffff;
+            font-weight: 700;
+            margin-bottom: 0.75rem;
+            letter-spacing: -0.5px;
+        }
+
+        .bento-header p {
+            color: var(--text-muted);
+            font-size: 1.1rem;
+        }
+
+        /* Bento Grid Base */
+        .bento-grid {
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+            gap: 2rem;
+            max-width: 1140px;
+            margin: 0 auto;
+            padding: 0 1.5rem;
+        }
+
+        /* Card Container Styling */
+        .bento-card {
+            background: var(--bg-card-gradient);
+            border: 1px solid var(--border-card);
+            border-radius: 24px;
+            padding: 2.25rem;
+            display: flex;
+            flex-direction: column;
+            gap: 1.75rem;
+            position: relative;
+            box-shadow: 0 10px 30px -15px rgba(0,0,0,0.7);
+            transition: border-color 0.4s cubic-bezier(0.16, 1, 0.3, 1), 
+                        transform 0.4s cubic-bezier(0.16, 1, 0.3, 1),
+                        box-shadow 0.4s cubic-bezier(0.16, 1, 0.3, 1);
+        }
+
+        .bento-card:hover {
+            border-color: var(--border-hover);
+            transform: translateY(-6px);
+            box-shadow: 0 20px 40px -20px rgba(0, 0, 0, 0.8), 0 0 25px 0 rgba(255, 255, 255, 0.01);
+        }
+
+        .card-full { grid-column: span 2; }
+        .card-half { grid-column: span 1; }
+        .card-info-full { grid-column: span 2; gap: 2rem; }
+
+        /* Card Header & Content Layout Layouting */
+        .card-info {
+            display: flex;
+            flex-direction: column;
+        }
+
+        .project-title {
+            font-family: 'Space Grotesk', sans-serif;
+            font-size: 1.45rem;
+            color: #ffffff;
+            font-weight: 600;
+            margin: 0 0 1rem 0;
+            display: flex;
+            align-items: center;
+            letter-spacing: -0.3px;
+        }
+
+        .game-icon {
+            margin-right: 12px; 
+            color: #ffffff;
+            font-size: 1.5rem;
+        }
+
+        .tech-badges {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 0.6rem;
+            margin-bottom: 1.25rem;
+        }
+
+        .badge {
+            font-family: 'Space Grotesk', sans-serif;
+            font-size: 0.72rem;
+            font-weight: 600;
+            background: var(--badge-bg);
+            color: #e4e4e7;
+            padding: 0.3rem 0.75rem;
+            border-radius: 6px;
+            border: 1px solid #27272a;
+            letter-spacing: 0.5px;
+        }
+
+        .badge-unity {
+            border: 1px solid rgba(255, 255, 255, 0.2);
+            background: #222227;
+        }
+
+        .project-desc {
+            color: var(--text-muted);
+            font-size: 0.95rem;
+            line-height: 1.7;
+            margin: 0 0 1.5rem 0;
+        }
+
+        /* Action Interactive Button */
+        .bento-actions {
+            margin-top: auto;
+        }
+
+        .btn-bento {
+            font-family: 'Space Grotesk', sans-serif;
+            font-size: 0.88rem;
+            text-decoration: none;
+            padding: 0.65rem 1.25rem;
+            border-radius: 10px;
+            background: #ffffff;
+            color: #000000;
+            display: inline-flex;
+            align-items: center;
+            gap: 0.6rem;
+            font-weight: 600;
+            transition: background-color 0.2s ease, transform 0.2s ease;
+        }
+
+        .btn-bento:hover {
+            background-color: #e4e4e7;
+            transform: scale(1.02);
+        }
+
+        .btn-bento i {
+            font-size: 0.8rem;
+            transition: transform 0.2s ease;
+        }
+
+        .btn-bento:hover i {
+            transform: translateX(3px);
+        }
+
+        /* Symmetrical Glassmorphism Image Box Preview */
+        .bento-img-preview {
+            width: 100%;
+            background: #060607;
+            border-radius: 16px;
+            overflow: hidden;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            border: 1px solid rgba(255, 255, 255, 0.03);
+            box-shadow: inset 0 0 20px rgba(0,0,0,0.6);
+            position: relative;
+        }
+
+        .tall-preview { height: 380px; }
+        .mobile-preview { height: 420px; }
+
+        .bento-mockup-img {
+            width: 100%;
+            height: 100%;
+            object-fit: contain;
+            padding: 1.5rem;
+            transition: transform 0.6s cubic-bezier(0.16, 1, 0.3, 1);
+        }
+
+        .bento-card:hover .bento-mockup-img {
+            transform: scale(1.04);
+        }
+
+        /* Info Bottom Bar Utilities */
+        .info-grid-wrapper {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 2rem;
+            width: 100%;
+        }
+
+        .info-block {
+            display: flex;
+            flex-direction: column;
+            gap: 0.4rem;
+        }
+
+        .info-label {
+            font-family: 'Space Grotesk', sans-serif;
+            font-size: 0.75rem;
+            color: #52525b;
+            font-weight: 700;
+            letter-spacing: 1px;
+        }
+
+        .info-value {
+            color: #ffffff;
+            font-size: 1rem;
+            font-weight: 500;
+        }
+
+        .status-active {
+            color: #22c55e;
+            display: flex;
+            align-items: center;
+            gap: 6px;
+        }
+
+        .status-active::before {
+            content: '';
+            display: inline-block;
+            width: 6px;
+            height: 6px;
+            background-color: #22c55e;
+            border-radius: 50%;
+            box-shadow: 0 0 8px #22c55e;
+        }
+
+        .bento-socials {
+            display: flex;
+            gap: 1.75rem;
+            border-top: 1px solid #1c1c21;
+            padding-top: 1.5rem;
+            width: 100%;
+        }
+
+        .bento-socials a {
+            color: var(--text-muted);
+            font-size: 1.25rem;
+            transition: color 0.2s ease, transform 0.2s ease;
+        }
+
+        .bento-socials a:hover {
+            color: #ffffff;
+            transform: translateY(-2px);
+        }
+
+        /* Responsive Breakpoints Styling */
+        @media (max-width: 900px) {
+            .bento-grid { gap: 1.5rem; }
+            .bento-card { padding: 1.75rem; }
+            .tall-preview { height: 300px; }
+            .mobile-preview { height: 350px; }
+        }
+
+        @media (max-width: 768px) {
+            .bento-grid { grid-template-columns: 1fr; }
+            .card-full, .card-half, .card-info-full { grid-column: span 1; }
+            .info-grid-wrapper { grid-template-columns: 1fr; gap: 1.25rem; }
+        }
+    </style>
+
+    <script>
+        const mobileMenuBtn = document.getElementById('mobile-menu-btn');
+        const navNavigationBox = document.getElementById('nav-navigation-box');
+        if(mobileMenuBtn && navNavigationBox) {
+            mobileMenuBtn.addEventListener('click', () => {
+                mobileMenuBtn.classList.toggle('active');
+                navNavigationBox.classList.toggle('active');
+            });
+        }
+    </script>
+</body>
+</html>
